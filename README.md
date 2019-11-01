@@ -26,7 +26,7 @@ Follow [Reactour](https://github.com/elrumordelaluz/reactour)'s doc
 
 ## Usage
 
-If you need to reset Tour step, write it like this
+If you need to reset Tour step after closing, write it like this
 
 ```javascript
 {
