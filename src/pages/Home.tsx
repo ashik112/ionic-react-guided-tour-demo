@@ -30,13 +30,20 @@ const Home: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding">
-      <Tour
-        steps={steps}
-        isOpen={tourOpen}
-        onRequestClose={() => setTourOpen(false)}
-        />
-        <IonButton onClick={() => setTourOpen(true)}>Start Tour</IonButton>
-        <br/>
+        {
+          tourOpen &&
+          <Tour
+            steps={steps}
+            isOpen={tourOpen}
+            onRequestClose={() => setTourOpen(false)}
+          />
+        }
+        <IonButton
+          onClick={() => {
+            setTourOpen(true);
+          }}
+        >Start Tour</IonButton>
+        <br />
         <span className="first-step">The world is your oyster.</span>
         <p className="second-step">
           If you get lost, the{' '}
